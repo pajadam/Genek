@@ -1,0 +1,7 @@
+*.layout
+obj
+bin
+lib
+*.ini
+release
+makefile
