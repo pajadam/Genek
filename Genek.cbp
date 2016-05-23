@@ -3,6 +3,7 @@
 	<FileVersion major="1" minor="6" />
 	<Project>
 		<Option title="Genek" />
+		<Option makefile="makefile" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -38,14 +39,21 @@
 		</Linker>
 		<Unit filename="src/core/core.cpp" />
 		<Unit filename="src/core/core.hpp" />
+		<Unit filename="src/core/generatorData.hpp" />
+		<Unit filename="src/core/generatorSettings.hpp" />
 		<Unit filename="src/gui/gui.cpp" />
 		<Unit filename="src/gui/gui.hpp" />
+		<Unit filename="src/logger/logger.cpp" />
+		<Unit filename="src/logger/logger.hpp" />
+		<Unit filename="src/logger/time.cpp" />
+		<Unit filename="src/logger/time.hpp" />
 		<Unit filename="src/main.cpp" />
+		<Unit filename="src/main.hpp" />
 		<Unit filename="version.h" />
 		<Extensions>
 			<AutoVersioning>
 				<Scheme minor_max="10" build_max="0" rev_max="0" rev_rand_max="10" build_times_to_increment_minor="100" />
-				<Settings autoincrement="1" date_declarations="1" use_define="0" update_manifest="255" do_auto_increment="0" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
+				<Settings autoincrement="1" date_declarations="1" use_define="0" update_manifest="1" do_auto_increment="0" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
 				<Changes_Log show_changes_editor="0" app_title="released version %M.%m.%b of %p" changeslog_path="ChangesLog.txt" />
 				<Code header_guard="VERSION_H" namespace="AutoVersion" prefix="" />
 			</AutoVersioning>

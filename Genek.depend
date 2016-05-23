@@ -1,6 +1,6 @@
 # depslib dependency file v1.0
-1464015375 source:e:\1.programowanie\genek\src\main.cpp
-	<iostream>
+1464028882 source:e:\1.programowanie\genek\src\main.cpp
+	"main.hpp"
 
 1411477910 e:\1.programowanie\genek\lib\windows\include\nana\gui.hpp
 	"gui/wvl.hpp"
@@ -155,7 +155,40 @@
 	"widget.hpp"
 	<nana/pat/cloneable.hpp>
 
-1464015490 source:e:\1.programowanie\genek\src\core\core.cpp
+1464023313 source:e:\1.programowanie\genek\src\core\core.cpp
 
-1464015512 source:e:\1.programowanie\genek\src\gui\gui.cpp
+1464028905 source:e:\1.programowanie\genek\src\gui\gui.cpp
+	"gui.hpp"
+
+1464026128 source:e:\1.programowanie\genek\src\logger\logger.cpp
+	"Logger.hpp"
+
+1464026162 e:\1.programowanie\genek\src\logger\logger.hpp
+	<iostream>
+	<fstream>
+	"time.hpp"
+
+1464023252 e:\1.programowanie\genek\src\logger\time.hpp
+	<time.h>
+	<sstream>
+
+1457489445 source:e:\1.programowanie\genek\src\logger\time.cpp
+	"Time.hpp"
+
+1464023341 source:e:\1.programowanie\genek\src\tui\tui.cpp
+
+1464028803 e:\1.programowanie\genek\src\main.hpp
+	<iostream>
+	"logger/logger.hpp"
+	"gui/gui.hpp"
+	<windows.h>
+
+1464025540 e:\1.programowanie\genek\src\winapi\base.hpp
+	<windows.h>
+
+1464025503 source:e:\1.programowanie\genek\src\winapi\base.cpp
+	"base.hpp"
+
+1464028792 e:\1.programowanie\genek\src\gui\gui.hpp
+	"../logger/logger.hpp"
 

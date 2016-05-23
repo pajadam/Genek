@@ -4,4 +4,4 @@ bin
 lib
 *.ini
 release
-makefile
+*.txt
