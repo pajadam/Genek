@@ -11,12 +11,6 @@
 
 typedef unsigned int gSize;
 
-struct voxel
-{
-    gSize x, y, z;
-    int data;
-};
-
 struct material
 {
     string name;

@@ -21,6 +21,10 @@ Genek::~Genek()
 bool Genek::generateMap( int Seed )
 {
     mLogger->Log( INFO, mPrefix + "Generating map using seed: " + to_string( Seed ) + " ..." );
+
+    genHeightMap( Seed, true );
+    mLogger->Log( INFO, mPrefix + "Height map size: " + to_string( h_map.size() ) );
+
     return 0;
 }
 

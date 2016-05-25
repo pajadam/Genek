@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1464028882 source:e:\1.programowanie\genek\src\main.cpp
+1464170649 source:e:\1.programowanie\genek\src\main.cpp
 	"main.hpp"
 
 1411477910 e:\1.programowanie\genek\lib\windows\include\nana\gui.hpp
@@ -155,7 +155,8 @@
 	"widget.hpp"
 	<nana/pat/cloneable.hpp>
 
-1464023313 source:e:\1.programowanie\genek\src\core\core.cpp
+1464191947 source:e:\1.programowanie\genek\src\core\core.cpp
+	"core.hpp"
 
 1464028905 source:e:\1.programowanie\genek\src\gui\gui.cpp
 	"gui.hpp"
@@ -177,10 +178,11 @@
 
 1464023341 source:e:\1.programowanie\genek\src\tui\tui.cpp
 
-1464028803 e:\1.programowanie\genek\src\main.hpp
+1464033472 e:\1.programowanie\genek\src\main.hpp
 	<iostream>
 	"logger/logger.hpp"
 	"gui/gui.hpp"
+	"core/core.hpp"
 	<windows.h>
 
 1464025540 e:\1.programowanie\genek\src\winapi\base.hpp
@@ -191,4 +193,217 @@
 
 1464028792 e:\1.programowanie\genek\src\gui\gui.hpp
 	"../logger/logger.hpp"
+
+1464183848 e:\1.programowanie\genek\src\core\core.hpp
+	<cmath>
+	<vector>
+	"../logger/logger.hpp"
+	"generatorSettings.hpp"
+	"../noise/PerlinNoise.h"
+	"../noise/ppm.h"
+
+1464192283 e:\1.programowanie\genek\src\core\generatorsettings.hpp
+
+1118177202 e:\1.programowanie\genek\src\noise\noiseutils.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<noise/noise.h>
+
+1103756668 e:\1.programowanie\genek\lib\windows\include\noise\noise.h
+	"module/module.h"
+	"model/model.h"
+	"misc.h"
+
+1103670316 e:\1.programowanie\genek\lib\windows\include\noise\module\module.h
+	"add.h"
+	"abs.h"
+	"billow.h"
+	"blend.h"
+	"cache.h"
+	"checkerboard.h"
+	"clamp.h"
+	"const.h"
+	"curve.h"
+	"cylinders.h"
+	"displace.h"
+	"exponent.h"
+	"invert.h"
+	"max.h"
+	"min.h"
+	"multiply.h"
+	"perlin.h"
+	"power.h"
+	"ridgedmulti.h"
+	"rotatepoint.h"
+	"scalebias.h"
+	"scalepoint.h"
+	"select.h"
+	"spheres.h"
+	"terrace.h"
+	"translatepoint.h"
+	"turbulence.h"
+	"voronoi.h"
+
+1103735918 e:\1.programowanie\genek\lib\windows\include\noise\module\add.h
+	"modulebase.h"
+
+1157046994 e:\1.programowanie\genek\lib\windows\include\noise\module\modulebase.h
+	<stdlib.h>
+	<assert.h>
+	<math.h>
+	"../basictypes.h"
+	"../exception.h"
+	"../noisegen.h"
+
+1103670442 e:\1.programowanie\genek\lib\windows\include\noise\basictypes.h
+
+1104173836 e:\1.programowanie\genek\lib\windows\include\noise\exception.h
+
+1103670470 e:\1.programowanie\genek\lib\windows\include\noise\noisegen.h
+	<math.h>
+	"basictypes.h"
+
+1103733936 e:\1.programowanie\genek\lib\windows\include\noise\module\abs.h
+	"modulebase.h"
+
+1104171702 e:\1.programowanie\genek\lib\windows\include\noise\module\billow.h
+	"modulebase.h"
+
+1104171722 e:\1.programowanie\genek\lib\windows\include\noise\module\blend.h
+	"modulebase.h"
+
+1103733954 e:\1.programowanie\genek\lib\windows\include\noise\module\cache.h
+	"modulebase.h"
+
+1103670254 e:\1.programowanie\genek\lib\windows\include\noise\module\checkerboard.h
+	"modulebase.h"
+
+1104171742 e:\1.programowanie\genek\lib\windows\include\noise\module\clamp.h
+	"modulebase.h"
+
+1103670266 e:\1.programowanie\genek\lib\windows\include\noise\module\const.h
+	"modulebase.h"
+
+1104171766 e:\1.programowanie\genek\lib\windows\include\noise\module\curve.h
+	"modulebase.h"
+
+1103670282 e:\1.programowanie\genek\lib\windows\include\noise\module\cylinders.h
+	"modulebase.h"
+
+1104171796 e:\1.programowanie\genek\lib\windows\include\noise\module\displace.h
+	"modulebase.h"
+
+1103756408 e:\1.programowanie\genek\lib\windows\include\noise\module\exponent.h
+	"modulebase.h"
+
+1103740168 e:\1.programowanie\genek\lib\windows\include\noise\module\invert.h
+	"modulebase.h"
+
+1103735732 e:\1.programowanie\genek\lib\windows\include\noise\module\max.h
+	"modulebase.h"
+
+1103735742 e:\1.programowanie\genek\lib\windows\include\noise\module\min.h
+	"modulebase.h"
+
+1103735934 e:\1.programowanie\genek\lib\windows\include\noise\module\multiply.h
+	"modulebase.h"
+
+1104171830 e:\1.programowanie\genek\lib\windows\include\noise\module\perlin.h
+	"modulebase.h"
+
+1103740154 e:\1.programowanie\genek\lib\windows\include\noise\module\power.h
+	"modulebase.h"
+
+1104171842 e:\1.programowanie\genek\lib\windows\include\noise\module\ridgedmulti.h
+	"modulebase.h"
+
+1103740134 e:\1.programowanie\genek\lib\windows\include\noise\module\rotatepoint.h
+	"modulebase.h"
+
+1103741018 e:\1.programowanie\genek\lib\windows\include\noise\module\scalebias.h
+	"modulebase.h"
+
+1103742324 e:\1.programowanie\genek\lib\windows\include\noise\module\scalepoint.h
+	"modulebase.h"
+
+1104172712 e:\1.programowanie\genek\lib\windows\include\noise\module\select.h
+	"modulebase.h"
+
+1103670586 e:\1.programowanie\genek\lib\windows\include\noise\module\spheres.h
+	"modulebase.h"
+
+1104171910 e:\1.programowanie\genek\lib\windows\include\noise\module\terrace.h
+	"modulebase.h"
+
+1103747362 e:\1.programowanie\genek\lib\windows\include\noise\module\translatepoint.h
+	"modulebase.h"
+
+1103756144 e:\1.programowanie\genek\lib\windows\include\noise\module\turbulence.h
+	"perlin.h"
+
+1103755566 e:\1.programowanie\genek\lib\windows\include\noise\module\voronoi.h
+	"modulebase.h"
+
+1103670620 e:\1.programowanie\genek\lib\windows\include\noise\model\model.h
+	"cylinder.h"
+	"line.h"
+	"plane.h"
+	"sphere.h"
+
+1103820858 e:\1.programowanie\genek\lib\windows\include\noise\model\cylinder.h
+	<assert.h>
+	<math.h>
+	<stdlib.h>
+	"../module/modulebase.h"
+
+1103821418 e:\1.programowanie\genek\lib\windows\include\noise\model\line.h
+	<assert.h>
+	<math.h>
+	<stdlib.h>
+	"../module/modulebase.h"
+
+1103820848 e:\1.programowanie\genek\lib\windows\include\noise\model\plane.h
+	<assert.h>
+	"../module/modulebase.h"
+
+1103820830 e:\1.programowanie\genek\lib\windows\include\noise\model\sphere.h
+	<assert.h>
+	"../module/modulebase.h"
+
+1103670460 e:\1.programowanie\genek\lib\windows\include\noise\misc.h
+
+1118177364 source:e:\1.programowanie\genek\src\noise\noiseutils.cpp
+	<fstream>
+	<noise/interp.h>
+	<noise/mathconsts.h>
+	"noiseutils.h"
+
+1104754610 e:\1.programowanie\genek\lib\windows\include\noise\interp.h
+
+1103670458 e:\1.programowanie\genek\lib\windows\include\noise\mathconsts.h
+
+1342762717 e:\1.programowanie\genek\src\noise\perlinnoise.h
+	<vector>
+
+1342762717 e:\1.programowanie\genek\src\noise\ppm.h
+	<vector>
+	<string>
+
+1342762717 source:e:\1.programowanie\genek\src\noise\perlinnoise.cpp
+	"PerlinNoise.h"
+	<iostream>
+	<cmath>
+	<random>
+	<algorithm>
+
+1342762717 source:e:\1.programowanie\genek\src\noise\ppm.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<exception>
+	"ppm.h"
+
+1464191974 source:e:\1.programowanie\genek\src\core\generatorheightmap.cpp
+	"core.hpp"
 

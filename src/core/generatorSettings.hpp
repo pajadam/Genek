@@ -13,9 +13,9 @@ typedef unsigned int gSize;
 
 struct settings
 {
-    gSize sizeX = 100;
-    gSize sizeY = 100;
-    gSize sizeZ = 100;
+    gSize sizeX = 256;
+    gSize sizeY = 256;
+    gSize sizeZ = 256;
 
     gSize surfaceLevel = 50;
     gSize waterLevel = 50;
