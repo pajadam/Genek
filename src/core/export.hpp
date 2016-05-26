@@ -12,6 +12,7 @@
 #include "generatorSettings.hpp"
 #include <fstream>
 #include "Array3D.hpp"
+#include <iostream>
 
 using namespace std;
 

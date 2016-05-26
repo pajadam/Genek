@@ -33,10 +33,6 @@ bool Genek::generateMap( int Seed )
 
     genSurface();
 
-    mLogger->Log( INFO, mPrefix + "Saving map to file... " );
-    if( exportMap() == 1 )
-        mLogger->Log( ERROR, mPrefix + "Failed to export map :/" );
-
     return 0;
 }
 
@@ -54,16 +50,20 @@ bool Genek::saveMap( string filename )
 
 bool Genek::exportMap( string filename )
 {
+    mLogger->Log( INFO, mPrefix + "Exporting map to file: '" + filename + "'" );
     gensettings.player.x = 1;
     gensettings.player.y = 1;
-    gensettings.player.z = 255;
+    gensettings.player.z = 0;
 
     material mat;
     mat.name = "karol-trawa";
-
     gensettings.materials.push_back(mat);
 
     mat.name = "bricks";
+
+    gensettings.materials.push_back(mat);
+
+    mat.name = "karol-zwir";
     gensettings.materials.push_back(mat);
 
     return mExporter.Export( filename, gensettings, *mapData );

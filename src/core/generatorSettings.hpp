@@ -19,10 +19,11 @@ struct settings
 {
     gSize sizeX = 256;
     gSize sizeY = 256;
-    gSize sizeZ = 64;
+    gSize sizeZ = 96;
 
-    gSize surfaceLevel = 50;
-    gSize waterLevel = 50;
+    gSize surfaceLevel = 108;
+    gSize dirtLevel = 4;
+    gSize waterLevel = 4;
 
     gSize treeSize = 10;
     gSize treeAmount = 10;

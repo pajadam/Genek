@@ -48,7 +48,6 @@ bool exporter::Export( string filename, settings &gen, Array3D &_map )
                              << gen.materials[ i ].sizeX << " "
                              << gen.materials[ i ].sizeY << endl;
     }
-
     // Sky and Sun
     mFile << "sky dusk" << endl;
     mFile << "sun " << gen.sunlight.dx << " "
@@ -60,7 +59,6 @@ bool exporter::Export( string filename, settings &gen, Array3D &_map )
                     << gen.sunlight.ar << " "
                     << gen.sunlight.ag << " "
                     << gen.sunlight.ab << endl;
-
     // Player Spawn
     mFile << "startpos " << gen.player.x << " "
                          << gen.player.y << " "

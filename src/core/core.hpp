@@ -11,6 +11,8 @@
 
 #include <cmath>
 #include <vector>
+#include <iostream>
+#include <cstdlib>
 
 #include "../logger/logger.hpp"
 #include "generatorData.hpp"
@@ -21,6 +23,13 @@
 #include "export.hpp"
 
 using namespace std;
+
+enum Block
+{
+    Grass = 1,
+    Bricks,
+    Gravel
+};
 
 class Genek
 {

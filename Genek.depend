@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1464170649 source:e:\1.programowanie\genek\src\main.cpp
+1464310234 source:e:\1.programowanie\genek\src\main.cpp
 	"main.hpp"
 
 1411477910 e:\1.programowanie\genek\lib\windows\include\nana\gui.hpp
@@ -155,7 +155,7 @@
 	"widget.hpp"
 	<nana/pat/cloneable.hpp>
 
-1464298399 source:e:\1.programowanie\genek\src\core\core.cpp
+1464310432 source:e:\1.programowanie\genek\src\core\core.cpp
 	"core.hpp"
 
 1464028905 source:e:\1.programowanie\genek\src\gui\gui.cpp
@@ -194,9 +194,11 @@
 1464028792 e:\1.programowanie\genek\src\gui\gui.hpp
 	"../logger/logger.hpp"
 
-1464274516 e:\1.programowanie\genek\src\core\core.hpp
+1464310244 e:\1.programowanie\genek\src\core\core.hpp
 	<cmath>
 	<vector>
+	<iostream>
+	<cstdlib>
 	"../logger/logger.hpp"
 	"generatorData.hpp"
 	"../noise/PerlinNoise.h"
@@ -205,7 +207,7 @@
 	"generatorSettings.hpp"
 	"export.hpp"
 
-1464298941 e:\1.programowanie\genek\src\core\generatorsettings.hpp
+1464307786 e:\1.programowanie\genek\src\core\generatorsettings.hpp
 	<vector>
 	"generatorData.hpp"
 
@@ -417,14 +419,15 @@
 1464297042 e:\1.programowanie\genek\src\core\generatordata.hpp
 	<string>
 
-1464296473 e:\1.programowanie\genek\src\core\export.hpp
+1464309521 e:\1.programowanie\genek\src\core\export.hpp
 	"generatorSettings.hpp"
 	<fstream>
 	"Array3D.hpp"
+	<iostream>
 
-1464300541 source:e:\1.programowanie\genek\src\core\generatorsurface.cpp
+1464309289 source:e:\1.programowanie\genek\src\core\generatorsurface.cpp
 	"core.hpp"
 
-1464298646 source:e:\1.programowanie\genek\src\core\export.cpp
+1464310295 source:e:\1.programowanie\genek\src\core\export.cpp
 	"export.hpp"
 
