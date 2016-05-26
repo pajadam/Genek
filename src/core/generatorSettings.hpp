@@ -9,22 +9,20 @@
 #ifndef GENERATORSETTINGS_HPP
 #define GENERATORSETTINGS_HPP
 
+#include <vector>
+#include "generatorData.hpp"
+
+
 typedef unsigned int gSize;
 
 struct settings
 {
     gSize sizeX = 256;
     gSize sizeY = 256;
-    gSize sizeZ = 256;
+    gSize sizeZ = 64;
 
     gSize surfaceLevel = 50;
     gSize waterLevel = 50;
-    gSize lavaLevel = 16;
-
-    gSize mountainSize = 25;
-
-    gSize canyonDepth = 25;
-    gSize canyonLength = 25;
 
     gSize treeSize = 10;
     gSize treeAmount = 10;
@@ -35,6 +33,13 @@ struct settings
     bool generateFlowers = true;
     bool generateGrass = true;
     bool generateLights = true;
+
+    sun sunlight;
+    startpos player;
+
+    vector<material> materials;
+    vector<light> lights;
+    vector<model> models;
 };
 
 #endif // GENERATORSETTINGS_HPP

@@ -16,6 +16,7 @@ Genek::Genek( FileLogger *logger )
 Genek::~Genek()
 {
     mLogger->Log( INFO, mPrefix + "Destructor." );
+    clear();
 }
 
 bool Genek::generateMap( int Seed )
@@ -23,7 +24,18 @@ bool Genek::generateMap( int Seed )
     mLogger->Log( INFO, mPrefix + "Generating map using seed: " + to_string( Seed ) + " ..." );
 
     genHeightMap( Seed, true );
+
     mLogger->Log( INFO, mPrefix + "Height map size: " + to_string( h_map.size() ) );
+
+    mLogger->Log( INFO, mPrefix + "Allocating memory: "
+                 + to_string( sizeof( char  ) * ( gensettings.sizeX * gensettings.sizeY * gensettings.sizeZ )  ) + " ..." );
+    mapData = new Array3D( gensettings.sizeX, gensettings.sizeY, gensettings.sizeZ );
+
+    genSurface();
+
+    mLogger->Log( INFO, mPrefix + "Saving map to file... " );
+    if( exportMap() == 1 )
+        mLogger->Log( ERROR, mPrefix + "Failed to export map :/" );
 
     return 0;
 }
@@ -42,6 +54,23 @@ bool Genek::saveMap( string filename )
 
 bool Genek::exportMap( string filename )
 {
+    gensettings.player.x = 1;
+    gensettings.player.y = 1;
+    gensettings.player.z = 255;
 
-    return 0;
+    material mat;
+    mat.name = "karol-trawa";
+
+    gensettings.materials.push_back(mat);
+
+    mat.name = "bricks";
+    gensettings.materials.push_back(mat);
+
+    return mExporter.Export( filename, gensettings, *mapData );
+}
+
+void Genek::clear()
+{
+    delete mapData;
+    h_map.clear();
 }

@@ -29,7 +29,7 @@ OBJDIR_WINDOWS = obj\\Windows
 DEP_WINDOWS = 
 OUT_WINDOWS = bin\\Windows\\Genek.exe
 
-OBJ_WINDOWS = $(OBJDIR_WINDOWS)\\src\\noise\\ppm.o $(OBJDIR_WINDOWS)\\src\\noise\\PerlinNoise.o $(OBJDIR_WINDOWS)\\src\\main.o $(OBJDIR_WINDOWS)\\src\\logger\\time.o $(OBJDIR_WINDOWS)\\src\\logger\\logger.o $(OBJDIR_WINDOWS)\\src\\gui\\gui.o $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o $(OBJDIR_WINDOWS)\\src\\core\\core.o
+OBJ_WINDOWS = $(OBJDIR_WINDOWS)\\src\\noise\\ppm.o $(OBJDIR_WINDOWS)\\src\\noise\\PerlinNoise.o $(OBJDIR_WINDOWS)\\src\\main.o $(OBJDIR_WINDOWS)\\src\\logger\\time.o $(OBJDIR_WINDOWS)\\src\\logger\\logger.o $(OBJDIR_WINDOWS)\\src\\gui\\gui.o $(OBJDIR_WINDOWS)\\src\\core\\generatorSurface.o $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o $(OBJDIR_WINDOWS)\\src\\core\\export.o $(OBJDIR_WINDOWS)\\src\\core\\core.o
 
 all: windows
 
@@ -69,8 +69,14 @@ $(OBJDIR_WINDOWS)\\src\\logger\\logger.o: src\\logger\\logger.cpp
 $(OBJDIR_WINDOWS)\\src\\gui\\gui.o: src\\gui\\gui.cpp
 	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\gui\\gui.cpp -o $(OBJDIR_WINDOWS)\\src\\gui\\gui.o
 
+$(OBJDIR_WINDOWS)\\src\\core\\generatorSurface.o: src\\core\\generatorSurface.cpp
+	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\core\\generatorSurface.cpp -o $(OBJDIR_WINDOWS)\\src\\core\\generatorSurface.o
+
 $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o: src\\core\\generatorHeightMap.cpp
 	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\core\\generatorHeightMap.cpp -o $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o
+
+$(OBJDIR_WINDOWS)\\src\\core\\export.o: src\\core\\export.cpp
+	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\core\\export.cpp -o $(OBJDIR_WINDOWS)\\src\\core\\export.o
 
 $(OBJDIR_WINDOWS)\\src\\core\\core.o: src\\core\\core.cpp
 	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\core\\core.cpp -o $(OBJDIR_WINDOWS)\\src\\core\\core.o

@@ -13,9 +13,12 @@
 #include <vector>
 
 #include "../logger/logger.hpp"
-#include "generatorSettings.hpp"
+#include "generatorData.hpp"
 #include "../noise/PerlinNoise.h"
 #include "../noise/ppm.h"
+#include "array3d.hpp"
+#include "generatorSettings.hpp"
+#include "export.hpp"
 
 using namespace std;
 
@@ -32,10 +35,16 @@ public:
     bool exportMap( string filename = "map.vox" ); // Export map to Compo Format
 private:
     void genHeightMap( int seed, bool writeToFile = false, string filePath = "heightmap.ppm" );
+    void genSurface();
 
-    vector<char> h_map;
+    void clear();
+
+    vector<unsigned char> h_map;
+
+    Array3D *mapData;
 
     settings gensettings;
+    exporter mExporter;
     FileLogger *mLogger;
     const string mPrefix = "[ MAPGEN ] ";
 };

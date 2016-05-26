@@ -39,11 +39,15 @@
 		<Linker>
 			<Add option="-s" />
 		</Linker>
+		<Unit filename="src/core/array3d.hpp" />
 		<Unit filename="src/core/core.cpp" />
 		<Unit filename="src/core/core.hpp" />
+		<Unit filename="src/core/export.cpp" />
+		<Unit filename="src/core/export.hpp" />
 		<Unit filename="src/core/generatorData.hpp" />
 		<Unit filename="src/core/generatorHeightMap.cpp" />
 		<Unit filename="src/core/generatorSettings.hpp" />
+		<Unit filename="src/core/generatorSurface.cpp" />
 		<Unit filename="src/gui/gui.cpp" />
 		<Unit filename="src/gui/gui.hpp" />
 		<Unit filename="src/logger/logger.cpp" />

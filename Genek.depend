@@ -155,7 +155,7 @@
 	"widget.hpp"
 	<nana/pat/cloneable.hpp>
 
-1464191947 source:e:\1.programowanie\genek\src\core\core.cpp
+1464298399 source:e:\1.programowanie\genek\src\core\core.cpp
 	"core.hpp"
 
 1464028905 source:e:\1.programowanie\genek\src\gui\gui.cpp
@@ -194,15 +194,20 @@
 1464028792 e:\1.programowanie\genek\src\gui\gui.hpp
 	"../logger/logger.hpp"
 
-1464183848 e:\1.programowanie\genek\src\core\core.hpp
+1464274516 e:\1.programowanie\genek\src\core\core.hpp
 	<cmath>
 	<vector>
 	"../logger/logger.hpp"
-	"generatorSettings.hpp"
+	"generatorData.hpp"
 	"../noise/PerlinNoise.h"
 	"../noise/ppm.h"
+	"array3d.hpp"
+	"generatorSettings.hpp"
+	"export.hpp"
 
-1464192283 e:\1.programowanie\genek\src\core\generatorsettings.hpp
+1464298941 e:\1.programowanie\genek\src\core\generatorsettings.hpp
+	<vector>
+	"generatorData.hpp"
 
 1118177202 e:\1.programowanie\genek\src\noise\noiseutils.h
 	<stdlib.h>
@@ -404,6 +409,22 @@
 	<exception>
 	"ppm.h"
 
-1464191974 source:e:\1.programowanie\genek\src\core\generatorheightmap.cpp
+1464300309 source:e:\1.programowanie\genek\src\core\generatorheightmap.cpp
 	"core.hpp"
+
+1464298784 e:\1.programowanie\genek\src\core\array3d.hpp
+
+1464297042 e:\1.programowanie\genek\src\core\generatordata.hpp
+	<string>
+
+1464296473 e:\1.programowanie\genek\src\core\export.hpp
+	"generatorSettings.hpp"
+	<fstream>
+	"Array3D.hpp"
+
+1464300541 source:e:\1.programowanie\genek\src\core\generatorsurface.cpp
+	"core.hpp"
+
+1464298646 source:e:\1.programowanie\genek\src\core\export.cpp
+	"export.hpp"
 

@@ -9,13 +9,17 @@
 #ifndef GENERATORDATA_HPP
 #define GENERATORDATA_HPP
 
+using namespace std;
+
+#include <string>
+
 typedef unsigned int gSize;
 
 struct material
 {
     string name;
-    char sizeX = 1;
-    char sizeY = 1;
+    int sizeX = 2;
+    int sizeY = 2;
 };
 
 struct startpos
@@ -50,9 +54,9 @@ struct model
 
 struct sun
 {
-    gSize dx, dy, dz;
-    char r,  g,  b;
-    char ar, ag, ab;
+    float dx = .3, dy = -1, dz = .4;
+    float r = 1.2,  g = 1.2,  b = .5;
+    int ar = 0, ag = 0, ab = 1;
 };
 
 #endif // GENERATORDATA_HPP
