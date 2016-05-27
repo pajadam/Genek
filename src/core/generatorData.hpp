@@ -56,7 +56,7 @@ struct sun
 {
     float dx = .3, dy = -1, dz = .4;
     float r = 1.2,  g = 1.2,  b = .5;
-    int ar = 0, ag = 0, ab = 1;
+    int ar = 1, ag = 1, ab = 1;
 };
 
 #endif // GENERATORDATA_HPP

@@ -416,7 +416,7 @@
 
 1464298784 e:\1.programowanie\genek\src\core\array3d.hpp
 
-1464297042 e:\1.programowanie\genek\src\core\generatordata.hpp
+1464310809 e:\1.programowanie\genek\src\core\generatordata.hpp
 	<string>
 
 1464309521 e:\1.programowanie\genek\src\core\export.hpp
@@ -425,7 +425,7 @@
 	"Array3D.hpp"
 	<iostream>
 
-1464309289 source:e:\1.programowanie\genek\src\core\generatorsurface.cpp
+1464310525 source:e:\1.programowanie\genek\src\core\generatorsurface.cpp
 	"core.hpp"
 
 1464310295 source:e:\1.programowanie\genek\src\core\export.cpp
