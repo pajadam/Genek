@@ -54,6 +54,7 @@
 		<Unit filename="src/core/export.cpp" />
 		<Unit filename="src/core/export.hpp" />
 		<Unit filename="src/core/generatorBorder.cpp" />
+		<Unit filename="src/core/generatorBridge.cpp" />
 		<Unit filename="src/core/generatorData.hpp" />
 		<Unit filename="src/core/generatorHeightMap.cpp" />
 		<Unit filename="src/core/generatorMaterials.cpp" />

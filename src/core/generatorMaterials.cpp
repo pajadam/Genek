@@ -2,7 +2,7 @@
   ********************************************
   * Copyright (C) @pajadam
   ********************************************
-  * Generator Core
+  * Generator Materials
   ********************************************
   */
 
@@ -10,6 +10,7 @@
 
 void Genek::setMaterials()
 {
+    mLogger->Log( INFO, mPrefix + "Setting up materials..." );
     material mat;
 
     mat.name = "p_grass";

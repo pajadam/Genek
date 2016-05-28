@@ -35,6 +35,8 @@ bool Genek::generateMap( int Seed )
 
     genSurface();
 
+    genBridges();
+
     genBorder();
 
     setMaterials();

@@ -53,6 +53,7 @@ private:
     void genHeightMap( int seed, bool writeToFile = false, string filePath = "heightmap.ppm" );
     void genSurface();
     void genBorder();
+    void genBridges();
     void findPlayerSpawn();
     void setMaterials();
 

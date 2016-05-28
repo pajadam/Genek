@@ -26,6 +26,8 @@ struct settings
     gSize dirtLevel = 4;
     gSize waterLevel = 4;
 
+    gSize bridgeSpacing = 8;
+
     bool generateStructures = true;
     bool generateLights = true;
     bool generateTrees = true;

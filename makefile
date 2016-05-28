@@ -29,7 +29,7 @@ OBJDIR_WINDOWS = obj\\Windows
 DEP_WINDOWS = 
 OUT_WINDOWS = bin\\Windows\\Genek.exe
 
-OBJ_WINDOWS = $(OBJDIR_WINDOWS)\\src\\res\\icon.o $(OBJDIR_WINDOWS)\\src\\noise\\ppm.o $(OBJDIR_WINDOWS)\\src\\noise\\PerlinNoise.o $(OBJDIR_WINDOWS)\\src\\main.o $(OBJDIR_WINDOWS)\\src\\logger\\time.o $(OBJDIR_WINDOWS)\\src\\logger\\logger.o $(OBJDIR_WINDOWS)\\src\\gui\\gui.o $(OBJDIR_WINDOWS)\\src\\core\\generatorSurface.o $(OBJDIR_WINDOWS)\\src\\core\\generatorPlayerSpawn.o $(OBJDIR_WINDOWS)\\src\\core\\generatorMaterials.o $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o $(OBJDIR_WINDOWS)\\src\\core\\generatorBorder.o $(OBJDIR_WINDOWS)\\src\\core\\export.o $(OBJDIR_WINDOWS)\\src\\core\\core.o
+OBJ_WINDOWS = $(OBJDIR_WINDOWS)\\src\\res\\icon.o $(OBJDIR_WINDOWS)\\src\\noise\\ppm.o $(OBJDIR_WINDOWS)\\src\\noise\\PerlinNoise.o $(OBJDIR_WINDOWS)\\src\\main.o $(OBJDIR_WINDOWS)\\src\\logger\\time.o $(OBJDIR_WINDOWS)\\src\\logger\\logger.o $(OBJDIR_WINDOWS)\\src\\gui\\gui.o $(OBJDIR_WINDOWS)\\src\\core\\generatorSurface.o $(OBJDIR_WINDOWS)\\src\\core\\generatorPlayerSpawn.o $(OBJDIR_WINDOWS)\\src\\core\\generatorMaterials.o $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o $(OBJDIR_WINDOWS)\\src\\core\\generatorBridge.o $(OBJDIR_WINDOWS)\\src\\core\\generatorBorder.o $(OBJDIR_WINDOWS)\\src\\core\\export.o $(OBJDIR_WINDOWS)\\src\\core\\core.o
 
 all: windows
 
@@ -84,6 +84,9 @@ $(OBJDIR_WINDOWS)\\src\\core\\generatorMaterials.o: src\\core\\generatorMaterial
 
 $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o: src\\core\\generatorHeightMap.cpp
 	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\core\\generatorHeightMap.cpp -o $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o
+
+$(OBJDIR_WINDOWS)\\src\\core\\generatorBridge.o: src\\core\\generatorBridge.cpp
+	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\core\\generatorBridge.cpp -o $(OBJDIR_WINDOWS)\\src\\core\\generatorBridge.o
 
 $(OBJDIR_WINDOWS)\\src\\core\\generatorBorder.o: src\\core\\generatorBorder.cpp
 	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\core\\generatorBorder.cpp -o $(OBJDIR_WINDOWS)\\src\\core\\generatorBorder.o
