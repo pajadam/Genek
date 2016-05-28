@@ -29,7 +29,7 @@ OBJDIR_WINDOWS = obj\\Windows
 DEP_WINDOWS = 
 OUT_WINDOWS = bin\\Windows\\Genek.exe
 
-OBJ_WINDOWS = $(OBJDIR_WINDOWS)\\src\\noise\\ppm.o $(OBJDIR_WINDOWS)\\src\\noise\\PerlinNoise.o $(OBJDIR_WINDOWS)\\src\\main.o $(OBJDIR_WINDOWS)\\src\\logger\\time.o $(OBJDIR_WINDOWS)\\src\\logger\\logger.o $(OBJDIR_WINDOWS)\\src\\gui\\gui.o $(OBJDIR_WINDOWS)\\src\\core\\generatorSurface.o $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o $(OBJDIR_WINDOWS)\\src\\core\\generatorBorder.o $(OBJDIR_WINDOWS)\\src\\core\\export.o $(OBJDIR_WINDOWS)\\src\\core\\core.o
+OBJ_WINDOWS = $(OBJDIR_WINDOWS)\\src\\res\\icon.o $(OBJDIR_WINDOWS)\\src\\noise\\ppm.o $(OBJDIR_WINDOWS)\\src\\noise\\PerlinNoise.o $(OBJDIR_WINDOWS)\\src\\main.o $(OBJDIR_WINDOWS)\\src\\logger\\time.o $(OBJDIR_WINDOWS)\\src\\logger\\logger.o $(OBJDIR_WINDOWS)\\src\\gui\\gui.o $(OBJDIR_WINDOWS)\\src\\core\\generatorSurface.o $(OBJDIR_WINDOWS)\\src\\core\\generatorPlayerSpawn.o $(OBJDIR_WINDOWS)\\src\\core\\generatorMaterials.o $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o $(OBJDIR_WINDOWS)\\src\\core\\generatorBorder.o $(OBJDIR_WINDOWS)\\src\\core\\export.o $(OBJDIR_WINDOWS)\\src\\core\\core.o
 
 all: windows
 
@@ -37,6 +37,7 @@ clean: clean_windows
 
 before_windows: 
 	cmd /c if not exist bin\\Windows md bin\\Windows
+	cmd /c if not exist $(OBJDIR_WINDOWS)\\src\\res md $(OBJDIR_WINDOWS)\\src\\res
 	cmd /c if not exist $(OBJDIR_WINDOWS)\\src\\noise md $(OBJDIR_WINDOWS)\\src\\noise
 	cmd /c if not exist $(OBJDIR_WINDOWS)\\src md $(OBJDIR_WINDOWS)\\src
 	cmd /c if not exist $(OBJDIR_WINDOWS)\\src\\logger md $(OBJDIR_WINDOWS)\\src\\logger
@@ -50,6 +51,9 @@ windows: before_windows out_windows after_windows
 
 out_windows: before_windows $(OBJ_WINDOWS) $(DEP_WINDOWS)
 	$(LD) $(LIBDIR_WINDOWS) -o $(OUT_WINDOWS) $(OBJ_WINDOWS)  $(LDFLAGS_WINDOWS) $(LIB_WINDOWS)
+
+$(OBJDIR_WINDOWS)\\src\\res\\icon.o: src\\res\\icon.rc
+	$(WINDRES) -i src\\res\\icon.rc -J rc -o $(OBJDIR_WINDOWS)\\src\\res\\icon.o -O coff $(INC_WINDOWS)
 
 $(OBJDIR_WINDOWS)\\src\\noise\\ppm.o: src\\noise\\ppm.cpp
 	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\noise\\ppm.cpp -o $(OBJDIR_WINDOWS)\\src\\noise\\ppm.o
@@ -72,6 +76,12 @@ $(OBJDIR_WINDOWS)\\src\\gui\\gui.o: src\\gui\\gui.cpp
 $(OBJDIR_WINDOWS)\\src\\core\\generatorSurface.o: src\\core\\generatorSurface.cpp
 	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\core\\generatorSurface.cpp -o $(OBJDIR_WINDOWS)\\src\\core\\generatorSurface.o
 
+$(OBJDIR_WINDOWS)\\src\\core\\generatorPlayerSpawn.o: src\\core\\generatorPlayerSpawn.cpp
+	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\core\\generatorPlayerSpawn.cpp -o $(OBJDIR_WINDOWS)\\src\\core\\generatorPlayerSpawn.o
+
+$(OBJDIR_WINDOWS)\\src\\core\\generatorMaterials.o: src\\core\\generatorMaterials.cpp
+	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\core\\generatorMaterials.cpp -o $(OBJDIR_WINDOWS)\\src\\core\\generatorMaterials.o
+
 $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o: src\\core\\generatorHeightMap.cpp
 	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\core\\generatorHeightMap.cpp -o $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o
 
@@ -87,6 +97,7 @@ $(OBJDIR_WINDOWS)\\src\\core\\core.o: src\\core\\core.cpp
 clean_windows: 
 	cmd /c del /f $(OBJ_WINDOWS) $(OUT_WINDOWS)
 	cmd /c rd bin\\Windows
+	cmd /c rd $(OBJDIR_WINDOWS)\\src\\res
 	cmd /c rd $(OBJDIR_WINDOWS)\\src\\noise
 	cmd /c rd $(OBJDIR_WINDOWS)\\src
 	cmd /c rd $(OBJDIR_WINDOWS)\\src\\logger

@@ -34,7 +34,8 @@ enum Block
     Leaf,
     Wood,
     Bricks,
-    Plank
+    Plank,
+    Water
 };
 
 class Genek
@@ -52,6 +53,8 @@ private:
     void genHeightMap( int seed, bool writeToFile = false, string filePath = "heightmap.ppm" );
     void genSurface();
     void genBorder();
+    void findPlayerSpawn();
+    void setMaterials();
 
     void clear();
 

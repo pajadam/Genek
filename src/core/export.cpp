@@ -31,10 +31,10 @@ bool exporter::Export( string filename, settings &gen, Array3D &_map )
                      << gen.sizeZ << endl;
 
     // Map Data
-    for( unsigned int y = 0; y < gen.sizeY; y++ ){
-        for( unsigned int z = 0; z < gen.sizeZ; z++ ){
+    for( gSize y = 0; y < gen.sizeY; y++ ){
+        for( gSize z = 0; z < gen.sizeZ; z++ ){
             mFile << "voxline " << y << " " << z;
-            for( unsigned int x = 0; x < gen.sizeX; x++ ){
+            for( gSize x = 0; x < gen.sizeX; x++ ){
                 mFile << " " << _map.get( x, y, z );
             }
             mFile << endl;
@@ -42,7 +42,7 @@ bool exporter::Export( string filename, settings &gen, Array3D &_map )
     }
 
     // Materials
-    for( unsigned int i = 0; i < gen.materials.size(); i++ )
+    for( gSize i = 0; i < gen.materials.size(); i++ )
     {
         mFile << "material " << gen.materials[ i ].name  << " "
                              << gen.materials[ i ].sizeX << " "
@@ -62,7 +62,11 @@ bool exporter::Export( string filename, settings &gen, Array3D &_map )
     // Player Spawn
     mFile << "startpos " << gen.player.x << " "
                          << gen.player.y << " "
-                         << gen.player.z << endl;
+                         << gen.player.z << " "
+                         << gen.player.direction << " "
+                         << gen.player.physics << " "
+                         << gen.player.torchLevel << " "
+                         << gen.player.testLightning << endl;
 
     mFile.close();
 

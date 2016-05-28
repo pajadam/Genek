@@ -13,13 +13,13 @@ using namespace std;
 
 #include <string>
 
-typedef unsigned int gSize;
+typedef unsigned short gSize;
 
 struct material
 {
     string name;
-    int sizeX = 1;
-    int sizeY = 1;
+    gSize sizeX = 1;
+    gSize sizeY = 1;
 };
 
 struct startpos
@@ -30,13 +30,13 @@ struct startpos
     bool physics = true; // 0 - Lot, 1 - fizyka
     bool testLightning = false;
 
-    char torchLevel = 1; // 0 - 4
+    gSize torchLevel = 1; // 0 - 4
 };
 
 struct light
 {
     gSize x, y, z;
-    char r, g, b;
+    gSize r, g, b;
     gSize range;
 };
 

@@ -13,8 +13,8 @@ void Genek::genHeightMap( int seed, bool writeToFile, string filePath )
     mLogger->Log( INFO, mPrefix + "Generating height map..." );
 	PerlinNoise pn( seed );
 
-	for(unsigned int i = 0; i < gensettings.sizeY; ++i) {     // y
-		for(unsigned int j = 0; j < gensettings.sizeX; ++j) {  // x
+	for( gSize i = 0; i < gensettings.sizeY; ++i) {     // y
+		for( gSize j = 0; j < gensettings.sizeX; ++j) {  // x
 			double x = (double)j/((double)gensettings.sizeX);
 			double y = (double)i/((double)gensettings.sizeY);
             double n = 4 * pn.noise( gensettings.sizeX / 40 * x,

@@ -37,6 +37,10 @@ bool Genek::generateMap( int Seed )
 
     genBorder();
 
+    setMaterials();
+
+    findPlayerSpawn();
+
     return 0;
 }
 
@@ -60,38 +64,6 @@ bool Genek::saveMap( string filename )
 bool Genek::exportMap( string filename )
 {
     mLogger->Log( INFO, mPrefix + "Exporting map to file: '" + filename + "'" );
-    gensettings.player.x = 1;
-    gensettings.player.y = 1;
-    gensettings.player.z = 0;
-
-    material mat;
-
-    mat.name = "p_grass";
-    gensettings.materials.push_back(mat);
-
-    mat.name = "p_dirt";
-    gensettings.materials.push_back(mat);
-
-    mat.name = "p_stone";
-    gensettings.materials.push_back(mat);
-
-    mat.name = "p_coal";
-    gensettings.materials.push_back(mat);
-
-    mat.name = "p_diamond";
-    gensettings.materials.push_back(mat);
-
-    mat.name = "p_leaf";
-    gensettings.materials.push_back(mat);
-
-    mat.name = "p_wood";
-    gensettings.materials.push_back(mat);
-
-    mat.name = "p_brick";
-    gensettings.materials.push_back(mat);
-
-    mat.name = "p_plank";
-    gensettings.materials.push_back(mat);
 
     return mExporter.Export( filename, gensettings, *mapData );
 }

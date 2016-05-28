@@ -12,8 +12,7 @@
 #include <vector>
 #include "generatorData.hpp"
 
-
-typedef unsigned int gSize;
+typedef unsigned short gSize;
 
 struct settings
 {
@@ -27,15 +26,9 @@ struct settings
     gSize dirtLevel = 4;
     gSize waterLevel = 4;
 
-    gSize treeSize = 10;
-    gSize treeAmount = 10;
-
-    gSize grassAmount = 10;
-
     bool generateStructures = true;
-    bool generateFlowers = true;
-    bool generateGrass = true;
     bool generateLights = true;
+    bool generateTrees = true;
 
     sun sunlight;
     startpos player;

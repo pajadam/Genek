@@ -56,6 +56,8 @@
 		<Unit filename="src/core/generatorBorder.cpp" />
 		<Unit filename="src/core/generatorData.hpp" />
 		<Unit filename="src/core/generatorHeightMap.cpp" />
+		<Unit filename="src/core/generatorMaterials.cpp" />
+		<Unit filename="src/core/generatorPlayerSpawn.cpp" />
 		<Unit filename="src/core/generatorSettings.hpp" />
 		<Unit filename="src/core/generatorSurface.cpp" />
 		<Unit filename="src/gui/gui.cpp" />
@@ -70,7 +72,10 @@
 		<Unit filename="src/noise/PerlinNoise.h" />
 		<Unit filename="src/noise/ppm.cpp" />
 		<Unit filename="src/noise/ppm.h" />
-		<Unit filename="version.h" />
+		<Unit filename="src/res/icon.ico" />
+		<Unit filename="src/res/icon.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
 		<Extensions>
 			<AutoVersioning>
 				<Scheme minor_max="10" build_max="0" rev_max="0" rev_rand_max="10" build_times_to_increment_minor="100" />
