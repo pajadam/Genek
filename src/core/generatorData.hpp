@@ -18,8 +18,8 @@ typedef unsigned int gSize;
 struct material
 {
     string name;
-    int sizeX = 2;
-    int sizeY = 2;
+    int sizeX = 1;
+    int sizeY = 1;
 };
 
 struct startpos
@@ -54,9 +54,9 @@ struct model
 
 struct sun
 {
-    float dx = .3, dy = -1, dz = .4;
-    float r = 1.2,  g = 1.2,  b = .5;
-    int ar = 1, ag = 1, ab = 1;
+    float dx = .3, dy = -1, dz = .5;
+    float r = 1,  g = 1,  b = .4;
+    float ar = .6, ag = .6, ab = .6;
 };
 
 #endif // GENERATORDATA_HPP

@@ -15,11 +15,9 @@
 				<Option compiler="gcc" />
 				<Option parameters="KAPPA" />
 				<Compiler>
-					<Add option="-O2" />
 					<Add directory="lib/Windows/include" />
 				</Compiler>
 				<Linker>
-					<Add option="-s" />
 					<Add library="nana" />
 					<Add library="gdi32" />
 					<Add library="comdlg32" />
@@ -33,6 +31,17 @@
 		<Compiler>
 			<Add option="-fexpensive-optimizations" />
 			<Add option="-O3" />
+			<Add option="-Wnon-virtual-dtor" />
+			<Add option="-Winit-self" />
+			<Add option="-Wredundant-decls" />
+			<Add option="-Wfloat-equal" />
+			<Add option="-Wunreachable-code" />
+			<Add option="-Wmissing-declarations" />
+			<Add option="-Wmissing-include-dirs" />
+			<Add option="-Wzero-as-null-pointer-constant" />
+			<Add option="-pedantic-errors" />
+			<Add option="-pedantic" />
+			<Add option="-Wextra" />
 			<Add option="-Wall" />
 			<Add option="-std=c++14" />
 		</Compiler>
@@ -44,6 +53,7 @@
 		<Unit filename="src/core/core.hpp" />
 		<Unit filename="src/core/export.cpp" />
 		<Unit filename="src/core/export.hpp" />
+		<Unit filename="src/core/generatorBorder.cpp" />
 		<Unit filename="src/core/generatorData.hpp" />
 		<Unit filename="src/core/generatorHeightMap.cpp" />
 		<Unit filename="src/core/generatorSettings.hpp" />

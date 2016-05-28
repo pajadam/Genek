@@ -23,6 +23,8 @@ bool Genek::generateMap( int Seed )
 {
     mLogger->Log( INFO, mPrefix + "Generating map using seed: " + to_string( Seed ) + " ..." );
 
+    gensettings.seed = Seed;
+
     genHeightMap( Seed, true );
 
     mLogger->Log( INFO, mPrefix + "Height map size: " + to_string( h_map.size() ) );
@@ -33,12 +35,19 @@ bool Genek::generateMap( int Seed )
 
     genSurface();
 
+    genBorder();
+
     return 0;
 }
 
-bool Genek::generateMap( int Seed, settings custom )
+bool Genek::generateMap( settings custom )
 {
-    mLogger->Log( INFO, mPrefix + "Generating map using custom settings and seed: " + to_string( Seed ) + " ..." );
+    mLogger->Log( INFO, mPrefix + "Generating map using custom settings..." );
+
+    gensettings = custom;
+
+    generateMap( gensettings.seed );
+
     return 0;
 }
 
@@ -56,14 +65,32 @@ bool Genek::exportMap( string filename )
     gensettings.player.z = 0;
 
     material mat;
-    mat.name = "karol-trawa";
+
+    mat.name = "p_grass";
     gensettings.materials.push_back(mat);
 
-    mat.name = "bricks";
-
+    mat.name = "p_dirt";
     gensettings.materials.push_back(mat);
 
-    mat.name = "karol-zwir";
+    mat.name = "p_stone";
+    gensettings.materials.push_back(mat);
+
+    mat.name = "p_coal";
+    gensettings.materials.push_back(mat);
+
+    mat.name = "p_diamond";
+    gensettings.materials.push_back(mat);
+
+    mat.name = "p_leaf";
+    gensettings.materials.push_back(mat);
+
+    mat.name = "p_wood";
+    gensettings.materials.push_back(mat);
+
+    mat.name = "p_brick";
+    gensettings.materials.push_back(mat);
+
+    mat.name = "p_plank";
     gensettings.materials.push_back(mat);
 
     return mExporter.Export( filename, gensettings, *mapData );

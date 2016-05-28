@@ -49,7 +49,7 @@ bool exporter::Export( string filename, settings &gen, Array3D &_map )
                              << gen.materials[ i ].sizeY << endl;
     }
     // Sky and Sun
-    mFile << "sky dusk" << endl;
+    mFile << "sky mc" << endl;
     mFile << "sun " << gen.sunlight.dx << " "
                     << gen.sunlight.dy << " "
                     << gen.sunlight.dz << " "

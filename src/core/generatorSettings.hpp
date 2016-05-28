@@ -19,7 +19,9 @@ struct settings
 {
     gSize sizeX = 256;
     gSize sizeY = 256;
-    gSize sizeZ = 96;
+    gSize sizeZ = 64;
+
+    int seed;
 
     gSize surfaceLevel = 108;
     gSize dirtLevel = 4;

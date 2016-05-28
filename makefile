@@ -12,24 +12,24 @@ LD = g++.exe
 WINDRES = windres.exe
 
 INC = 
-CFLAGS = -fexpensive-optimizations -O3 -Wall -std=c++14
+CFLAGS = -fexpensive-optimizations -O3 -Wnon-virtual-dtor -Winit-self -Wredundant-decls -Wfloat-equal -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wzero-as-null-pointer-constant -pedantic-errors -pedantic -Wextra -Wall -std=c++14
 RESINC = 
 LIBDIR = 
 LIB = 
 LDFLAGS = -s
 
 INC_WINDOWS = $(INC) -Ilib\Windows\include
-CFLAGS_WINDOWS = $(CFLAGS) -O2
+CFLAGS_WINDOWS = $(CFLAGS)
 RESINC_WINDOWS = $(RESINC)
 RCFLAGS_WINDOWS = $(RCFLAGS)
 LIBDIR_WINDOWS = $(LIBDIR) -Llib\Windows\lib
 LIB_WINDOWS = $(LIB)-lnana -lgdi32 -lcomdlg32
-LDFLAGS_WINDOWS = $(LDFLAGS) -s
+LDFLAGS_WINDOWS = $(LDFLAGS)
 OBJDIR_WINDOWS = obj\\Windows
 DEP_WINDOWS = 
 OUT_WINDOWS = bin\\Windows\\Genek.exe
 
-OBJ_WINDOWS = $(OBJDIR_WINDOWS)\\src\\noise\\ppm.o $(OBJDIR_WINDOWS)\\src\\noise\\PerlinNoise.o $(OBJDIR_WINDOWS)\\src\\main.o $(OBJDIR_WINDOWS)\\src\\logger\\time.o $(OBJDIR_WINDOWS)\\src\\logger\\logger.o $(OBJDIR_WINDOWS)\\src\\gui\\gui.o $(OBJDIR_WINDOWS)\\src\\core\\generatorSurface.o $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o $(OBJDIR_WINDOWS)\\src\\core\\export.o $(OBJDIR_WINDOWS)\\src\\core\\core.o
+OBJ_WINDOWS = $(OBJDIR_WINDOWS)\\src\\noise\\ppm.o $(OBJDIR_WINDOWS)\\src\\noise\\PerlinNoise.o $(OBJDIR_WINDOWS)\\src\\main.o $(OBJDIR_WINDOWS)\\src\\logger\\time.o $(OBJDIR_WINDOWS)\\src\\logger\\logger.o $(OBJDIR_WINDOWS)\\src\\gui\\gui.o $(OBJDIR_WINDOWS)\\src\\core\\generatorSurface.o $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o $(OBJDIR_WINDOWS)\\src\\core\\generatorBorder.o $(OBJDIR_WINDOWS)\\src\\core\\export.o $(OBJDIR_WINDOWS)\\src\\core\\core.o
 
 all: windows
 
@@ -74,6 +74,9 @@ $(OBJDIR_WINDOWS)\\src\\core\\generatorSurface.o: src\\core\\generatorSurface.cp
 
 $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o: src\\core\\generatorHeightMap.cpp
 	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\core\\generatorHeightMap.cpp -o $(OBJDIR_WINDOWS)\\src\\core\\generatorHeightMap.o
+
+$(OBJDIR_WINDOWS)\\src\\core\\generatorBorder.o: src\\core\\generatorBorder.cpp
+	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\core\\generatorBorder.cpp -o $(OBJDIR_WINDOWS)\\src\\core\\generatorBorder.o
 
 $(OBJDIR_WINDOWS)\\src\\core\\export.o: src\\core\\export.cpp
 	$(CXX) $(CFLAGS_WINDOWS) $(INC_WINDOWS) -c src\\core\\export.cpp -o $(OBJDIR_WINDOWS)\\src\\core\\export.o

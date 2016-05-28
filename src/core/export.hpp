@@ -23,10 +23,6 @@ public:
     ~exporter();
 
     bool Export( string filename, settings &gen, Array3D &_map );
-private:
-    void sHeader();
-    void sData();
-    void sFooter();
 };
 
 #endif // EXPORT_HPP

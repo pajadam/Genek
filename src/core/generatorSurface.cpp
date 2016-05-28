@@ -10,12 +10,12 @@
 
 void Genek::genSurface()
 {
-    srand( time( NULL ) );
+    srand( gensettings.seed );
     mLogger->Log( INFO, mPrefix + "Generating surface..." );
     unsigned int h = 0;
     for( unsigned int i = 0; i < gensettings.sizeY; i++ ){
         for( unsigned int j = 0; j < gensettings.sizeX; j++ ){
-            char pos = h_map[h] / ( 256 / gensettings.sizeZ);
+            unsigned char pos = h_map[h] / ( 256 / gensettings.sizeZ);
             if( pos < gensettings.surfaceLevel / ( 256 / gensettings.sizeZ)  )
             {
                 for( unsigned int x = pos; x > 0; x-- )
@@ -34,23 +34,22 @@ void Genek::genSurface()
                     {
                         mapData->get( j, i, y ) = Block::Grass;
                     }else
-                    if( k < gensettings.dirtLevel )
+                    if( k < gensettings.dirtLevel * ( (std::rand() % 2) + 1 ) )
                     {
-                        mapData->get( j, i, y ) = Block::Grass;//dirt
+                        mapData->get( j, i, y ) = Block::Dirt;
                     }else
                     {
                         int ran = ( std::rand() % 100 );
-                        if( ran > 50 )
+                        if( ran > 90 )
                         {
-                            if( ran > 65 )
-                                mapData->get( j, i, y ) = Block::Gravel;
+                            if( ran > 92 )
+                                mapData->get( j, i, y ) = Block::Coal;
                             else
-                                mapData->get( j, i, y ) = Block::Grass;
+                                mapData->get( j, i, y ) = Block::Diamond;
                         }else
                         {
-                            mapData->get( j, i, y ) = Block::Bricks;
+                            mapData->get( j, i, y ) = Block::Stone;
                         }
-
                     }
                     k++;
                 }

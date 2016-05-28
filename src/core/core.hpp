@@ -27,8 +27,14 @@ using namespace std;
 enum Block
 {
     Grass = 1,
+    Dirt,
+    Stone,
+    Coal,
+    Diamond,
+    Leaf,
+    Wood,
     Bricks,
-    Gravel
+    Plank
 };
 
 class Genek
@@ -38,13 +44,14 @@ public:
     ~Genek();
 
     bool generateMap( int seed );
-    bool generateMap( int seed, settings custom );
+    bool generateMap( settings custom );
 
     bool saveMap( string filename = "map.pmg" ); // Save whole Generator project #ToDo Tier 2
     bool exportMap( string filename = "map.vox" ); // Export map to Compo Format
 private:
     void genHeightMap( int seed, bool writeToFile = false, string filePath = "heightmap.ppm" );
     void genSurface();
+    void genBorder();
 
     void clear();
 
