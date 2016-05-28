@@ -12,6 +12,7 @@ void Genek::genSurface()
 {
     srand( gensettings.seed );
     mLogger->Log( INFO, mPrefix + "Generating surface..." );
+    unsigned short mUSL = ((gensettings.surfaceLevel / ( 256 / gensettings.sizeZ)) / 25) * 2;
     unsigned int h = 0;
     for( gSize i = 0; i < gensettings.sizeY; i++ ){
         for( gSize j = 0; j < gensettings.sizeX; j++ ){
@@ -22,12 +23,10 @@ void Genek::genSurface()
                 {
                     if( x > (gensettings.waterLevel / ( 256 / gensettings.sizeZ)) + pos / 25 )
                     {
-                        mapData->get( j, i, x ) = 0;
-
-                        //cout << ((gensettings.surfaceLevel / ( 256 / gensettings.sizeZ)) / 25) * 2 << endl;
-
-                        if( x <= ((gensettings.surfaceLevel / ( 256 / gensettings.sizeZ)) / 25) * 2 )
+                        if( x <= mUSL )
                             mapData->get( j, i, x) = Block::Water;
+                        else
+                            mapData->get( j, i, x ) = 0;
                     }
                     else
                     {
