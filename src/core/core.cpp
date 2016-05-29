@@ -35,7 +35,7 @@ bool Genek::generateMap( int Seed )
 
     genSurface();
 
-    if( gensettings.generateBridges == true )
+    if( gensettings.generateBridges == 1 )
         genBridges();
 
     genBorder();

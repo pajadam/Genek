@@ -12,7 +12,7 @@ LD = g++.exe
 WINDRES = windres.exe
 
 INC = 
-CFLAGS = -fexpensive-optimizations -O3 -Wnon-virtual-dtor -Winit-self -Wredundant-decls -Wfloat-equal -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wzero-as-null-pointer-constant -pedantic-errors -pedantic -Wextra -Wall -std=c++14
+CFLAGS = -fexpensive-optimizations -O3 -Wall -std=c++14
 RESINC = 
 LIBDIR = 
 LIB = 

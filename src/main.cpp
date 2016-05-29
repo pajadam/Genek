@@ -64,6 +64,7 @@ void usage()
          << "Usage:" << endl
          << " GUI  Mode: 'Genek.exe' " << endl
          << " Seed Mode: 'Genek.exe <seed>'" << endl;
+    cout << "For much more options, run GUI mode." << endl;
 }
 
 BOOL WINAPI ClearConsole( DWORD )

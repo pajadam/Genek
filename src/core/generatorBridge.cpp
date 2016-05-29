@@ -26,6 +26,8 @@ void Genek::genBridges()
             if( mapData->get( x, y, z) != 0            && mapData->get( x, y + 1, z) != 0 &&
                 mapData->get( x + 1, y, z) == 0        && mapData->get( x + 1, y + 1, z) == 0 &&
                 mapData->get( x, y, z) != Block::Plank && mapData->get( x, y + 1, z) != Block::Plank &&
+                mapData->get( x, y, z) != Block::Bricks && mapData->get( x, y + 1, z) != Block::Bricks &&
+                mapData->get( x, y, z) != Block::Slab && mapData->get( x, y + 1, z) != Block::Slab &&
                 mapData->get( x, y, z + 1) == 0        && mapData->get( x, y + 1, z + 1) ==  0 )
             {
                 int length = 0;
@@ -166,6 +168,7 @@ void Genek::genBridges()
                 mapData->get( x, y + 1, z) == 0        && mapData->get( x + 1, y + 1, z) == 0 &&
                 mapData->get( x, y, z) != Block::Plank && mapData->get( x + 1, y, z) != Block::Plank &&
                 mapData->get( x, y, z) != Block::Bricks&& mapData->get( x + 1, y, z) != Block::Bricks &&
+                mapData->get( x, y, z) != Block::Slab  && mapData->get( x + 1, y, z) != Block::Slab &&
                 mapData->get( x, y, z + 1) == 0        && mapData->get( x + 1, y, z + 1) ==  0 )
             {
                 int length = 0;
@@ -173,13 +176,16 @@ void Genek::genBridges()
                 for( int i = y + 1; i < gensettings.sizeY - 4; i++ )
                 {
                     length++;
-                    if( mapData->get( x, i, z) == Block::Plank || mapData->get( x + 1, i, z) == Block::Plank )
+                    if( ( mapData->get( x, i, z) == Block::Plank || mapData->get( x + 1, i, z) == Block::Plank ) ||
+                        ( mapData->get( x, i, z) == Block::Bricks || mapData->get( x + 1, i, z) == Block::Bricks ) ||
+                        ( mapData->get( x, i, z) == Block::Slab || mapData->get( x + 1, i, z) == Block::Slab ))
                     {
                         break;
                     }else
                     if( mapData->get( x, i, z) != 0     && mapData->get( x + 1, i, z) != 0 &&
                         mapData->get( x, i, z) != Block::Plank && mapData->get( x + 1, i, z) != Block::Plank &&
                         mapData->get( x, i, z) != Block::Bricks && mapData->get( x + 1, i, z) != Block::Bricks &&
+                        mapData->get( x, i, z) != Block::Slab && mapData->get( x + 1, i, z) != Block::Slab &&
                         ( mapData->get( x, i, z + 1) == 0 || mapData->get( x + 1, i, z + 1) == 0 ) )
                     {
                         if( length > gensettings.bridgeMaxLength || length < gensettings.bridgeMinLength )
