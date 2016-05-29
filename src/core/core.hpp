@@ -35,7 +35,8 @@ enum Block
     Wood,
     Bricks,
     Plank,
-    Water
+    Water,
+    Slab
 };
 
 class Genek

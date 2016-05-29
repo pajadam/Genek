@@ -42,4 +42,7 @@ void Genek::setMaterials()
 
     mat.name = "p_water";
     gensettings.materials.push_back(mat);
+
+    mat.name = "p_slab";
+    gensettings.materials.push_back(mat);
 }
