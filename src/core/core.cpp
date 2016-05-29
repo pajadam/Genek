@@ -25,7 +25,7 @@ bool Genek::generateMap( int Seed )
 
     gensettings.seed = Seed;
 
-    genHeightMap( Seed, true );
+    genHeightMap( Seed, gensettings.saveHeightMap );
 
     mLogger->Log( INFO, mPrefix + "Height map size: " + to_string( h_map.size() ) );
 
@@ -35,7 +35,8 @@ bool Genek::generateMap( int Seed )
 
     genSurface();
 
-    genBridges();
+    if( gensettings.generateBridges == true )
+        genBridges();
 
     genBorder();
 

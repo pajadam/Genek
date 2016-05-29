@@ -155,7 +155,7 @@
 	"widget.hpp"
 	<nana/pat/cloneable.hpp>
 
-1464451430 source:e:\1.programowanie\genek\src\core\core.cpp
+1464454063 source:e:\1.programowanie\genek\src\core\core.cpp
 	"core.hpp"
 
 1464028905 source:e:\1.programowanie\genek\src\gui\gui.cpp
@@ -207,7 +207,7 @@
 	"generatorSettings.hpp"
 	"export.hpp"
 
-1464451395 e:\1.programowanie\genek\src\core\generatorsettings.hpp
+1464526563 e:\1.programowanie\genek\src\core\generatorsettings.hpp
 	<vector>
 	"generatorData.hpp"
 
@@ -439,9 +439,9 @@
 1464451592 source:e:\1.programowanie\genek\src\core\generatormaterials.cpp
 	"core.hpp"
 
-1464453031 source:e:\1.programowanie\genek\src\core\generatorplayerspawn.cpp
+1464453870 source:e:\1.programowanie\genek\src\core\generatorplayerspawn.cpp
 	"core.hpp"
 
-1464451640 source:e:\1.programowanie\genek\src\core\generatorbridge.cpp
+1464526408 source:e:\1.programowanie\genek\src\core\generatorbridge.cpp
 	"core.hpp"
 

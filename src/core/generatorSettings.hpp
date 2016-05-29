@@ -26,11 +26,14 @@ struct settings
     gSize dirtLevel = 4;
     gSize waterLevel = 4;
 
-    gSize bridgeSpacing = 8;
+    gSize bridgeSpacing = 32;
+    gSize bridgeMaxLength = 64;
+    gSize bridgeMinLength = 8;
 
-    bool generateStructures = true;
+    bool generateBridges = true;
     bool generateLights = true;
     bool generateTrees = true;
+    bool saveHeightMap = false;
 
     sun sunlight;
     startpos player;
