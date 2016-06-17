@@ -1,15 +1,19 @@
 # What is it?
 
-This is Voxdung world generator written in 6 days for Warsztat.GD compo.
+This is Voxdung world generator written in 6 days for [Warsztat.GD](http://warsztat.gd/) compo.
+
+![screenshot1](https://pajadam.github.io/img/genek/genek_1.PNG "Screenshot #1")
 
 # How to use?
 
 You can simply double click Genek.exe. It'll start in graphical mode.
 
-If you wanna use command line, just use 'Genek (seed)' from command line.
+![screenshot2](https://pajadam.github.io/img/genek/genek_2.PNG "Screenshot #2")
+
+If you wanna use command line, just use `Genek (seed)` from command line.
 It'll generate map with default options using given seed.
 
-##### You need copy data from 'data/VOXDUNG_DATA/' to your Voxdung Data Folder.
+##### You need copy data from `data/VOXDUNG_DATA/` to your Voxdung Data Folder.
 
 # What am I using to build this?
 
